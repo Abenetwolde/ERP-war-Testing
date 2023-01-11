@@ -6,12 +6,11 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.Login">
+      <class name="tests.JobRegstration">
         <methods>
-          <include name="tearDown"/>
-          <include name="testLogin" invocation-numbers="0 1"/>
+          <include name="testRegister" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- tests.Login -->
+      </class> <!-- tests.JobRegstration -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

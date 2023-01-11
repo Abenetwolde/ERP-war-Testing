@@ -49,6 +49,11 @@ public class Login1 extends Base {
         homePage.selectHRMSlinkTextLink();
         Dashboard dashboard= new Dashboard(driver);
         dashboard.clickOrganizationInformationDropMenu();
+        dashboard.selectLoginOption();
+        LoginPage1 loginPage = new LoginPage1(driver);
+        loginPage.enterUserName(hMap.get("Username"));
+		loginPage.enterPassword(hMap.get("Password"));
+		loginPage.clickOnLoginButton();
         OrganizationStruacture organizationStruacturePage=new OrganizationStruacture(driver);
 
 		String expectedResult = hMap.get("ExpectedResult");

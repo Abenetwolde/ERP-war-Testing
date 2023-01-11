@@ -28,17 +28,17 @@ public class JobRegstration extends Base {
 	WebDriver driver;
 	MyXLSReader excelReader;
 	
-	@AfterMethod
-	public void tearDown() {
-		
-		if(driver!=null) {	
-			driver.quit();
-		}
-		
-	}
+//	@AfterMethod
+//	public void tearDown() {
+//		
+//		if(driver!=null) {	
+//			driver.quit();
+//		}
+//		
+//	}
 	
 	@Test(dataProvider="dataSupplier")
-	public void testRegister(HashMap<String,String> hMap) throws IOException {
+	public void testRegister(HashMap<String,String> hMap) throws IOException, InterruptedException {
 		
 		if(!DataUtil.isRunnable(excelReader, "JobRegisterTest", "Testcases") || hMap.get("Runmode").equals("N")) {
 			
@@ -61,29 +61,44 @@ public class JobRegstration extends Base {
         	jobRegisterPage.clickOnAddJobButton();
         	jobRegisterPage.enterJobCode(hMap.get("Job Code"));;
         	jobRegisterPage.clickonAddDepartmentButton();
+    	    Thread.sleep(2000);
          	jobRegisterPage.clickonDropDownButton();
-        	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+    	    Thread.sleep(2000);
         	jobRegisterPage.SelectDepartment();
-         	driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
+    	    Thread.sleep(2000);
     
         	jobRegisterPage.enterJobTitle(hMap.get("Job Title"));
-        	driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
+    	    Thread.sleep(2000);
         	jobRegisterPage.enterNoEmpNeeded(hMap.get("No of Emp Needed"));
-        	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+    	    Thread.sleep(2000);
         	jobRegisterPage.enterJobDescription(hMap.get("Job Description"));
+    	    Thread.sleep(2000);
         	jobRegisterPage.enterRelevantExperience(hMap.get("Relevant Experience"));
+    	    Thread.sleep(2000);
         	jobRegisterPage.enterRemark(hMap.get("Alternative Experience"));
+    	    Thread.sleep(2000);
         	jobRegisterPage.clickonJobGradeDropDown();
+    	    Thread.sleep(2000);
         	jobRegisterPage.SelectJobGrade();
+    	    Thread.sleep(2000);
         	jobRegisterPage.clickonJobCategoryDropDown();
+    	    Thread.sleep(2000);
         	jobRegisterPage.SelectJobCategory();
+    	    Thread.sleep(2000);
         	jobRegisterPage.SelectRadioButton();
+    	    Thread.sleep(2000);
         	jobRegisterPage.clickonEducationalLevelDropDown();
+    	    Thread.sleep(2000);
         	jobRegisterPage.SelectEducationLevel();
+    	    Thread.sleep(2000);
         	jobRegisterPage.clickonQualificationDropDown();
+    	    Thread.sleep(2000);
         	jobRegisterPage.SelectQualification();
+    	    Thread.sleep(2000);
         	jobRegisterPage.enterNoMinExp(hMap.get("MinExperience"));
+    	    Thread.sleep(2000);
         	jobRegisterPage.AddButton();
+    	    Thread.sleep(2000);
         	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
         	jobRegisterPage.SubmitButton();
         	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;

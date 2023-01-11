@@ -29,14 +29,14 @@ public class CandidateRegistrationTest extends Base {
 	WebDriver driver;
 	MyXLSReader excelReader;
 	
-	@AfterMethod
-	public void tearDown() {
-		
-		if(driver!=null) {	
-			driver.quit();
-		}
-		
-	}
+//	@AfterMethod
+//	public void tearDown() {
+//		
+//		if(driver!=null) {	
+//			driver.quit();
+//		}
+//		
+//	}
 	
 	@Test(dataProvider="dataSupplier")
 	public void testRegister(HashMap<String,String> hMap) throws IOException, InterruptedException {

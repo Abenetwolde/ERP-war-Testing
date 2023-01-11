@@ -1,6 +1,6 @@
 package pageobjects;
 
-import java.text.DecimalFormat;
+//import java.text.DecimalFormat;
 
 
 import org.openqa.selenium.WebDriver;
@@ -90,11 +90,11 @@ public void selectOnJobTitle() {
 		
 	}
 public void enterNumberofEmployeesRequested(String txtNoOfEmployee) {
-	 double parseDouble = Double.parseDouble(txtNoOfEmployee);
-	 DecimalFormat df = new DecimalFormat("0");
-       String formatNumber = df.format(parseDouble);
+//	 double parseDouble = Double.parseDouble(txtNoOfEmployee);
+//	 DecimalFormat df = new DecimalFormat("0");
+//       String formatNumber = df.format(parseDouble);
 	
-	NumberofemployeesrequestedText.sendKeys(formatNumber);
+	NumberofemployeesrequestedText.sendKeys(txtNoOfEmployee);
 		
 	}
 public void enterComment(String txtComment) {

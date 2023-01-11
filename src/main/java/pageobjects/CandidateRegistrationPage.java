@@ -18,7 +18,7 @@ public class CandidateRegistrationPage {
 	
 	}
 
-	@FindBy(xpath="//*[@id=\"frmTop:btnNew\"]/span[1]]")
+	@FindBy(id="frmTop:btnNew")
 	private WebElement PluseButton;
 	@FindBy(xpath="//*[@id=\"frmCandidate:somBatchCode\"]/div[3]/span")
 	private WebElement drop1;

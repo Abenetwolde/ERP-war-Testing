@@ -9,14 +9,14 @@ public class ExtentReporter {
 		
 		String extentReportPath = System.getProperty("user.dir")+"\\reports\\extentreport.html"; 
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(extentReportPath);
-		sparkReporter.config().setReportName("TutorialsNinja Automation Results");	
-		sparkReporter.config().setDocumentTitle("TutorialsNinja Automation Test Results");
+		sparkReporter.config().setReportName("ERP-war Automation Results");	
+		sparkReporter.config().setDocumentTitle("ERP-war Test Results");
 	
 		ExtentReports extentReport = new ExtentReports();
 		extentReport.attachReporter(sparkReporter);
 		extentReport.setSystemInfo("Selenium Version","4.4.0");
-		extentReport.setSystemInfo("Operating System","Windows 11");
-		extentReport.setSystemInfo("Executed By","Arun Motoori");
+		extentReport.setSystemInfo("Operating System","Windows 10");
+		extentReport.setSystemInfo("Executed By","Abnet wolde");
 		
 		return extentReport;
 	

@@ -1,7 +1,5 @@
 package pageobjects;
-
-import java.text.DecimalFormat;
-
+//import java.text.DecimalFormat;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,11 +44,11 @@ public class RegistrationPage {
 	private WebElement txtRemark;
 	@FindBy(id="frmJobRegistration:somJobGrade_label")
 	private WebElement jobGradeDropdown;
-	@FindBy(xpath="//*[@id=\"frmJobRegistration:somJobGrade_panel\"]/div/ul/li[3]")
+	@FindBy(xpath="//*[@id=\\\"frmJobRegistration:somJobGrade_panel\\\"]/div/ul/li[3]")
 	private WebElement selectJopGrade;
-	@FindBy(id="frmJobRegistration:somCatagory_label")
+	@FindBy(xpath="//*[@id=\"frmJobRegistration:somJobGrade\"]/div[3]")
 	private WebElement jobCatagoryDropdown;
-	@FindBy(xpath="//*[@id=\"frmJobRegistration:somCatagory_panel\"]/div/ul/li[6]")
+	@FindBy(xpath="//*[@id=\"frmJobRegistration:somCatagory\"]/div[3]")
 	private WebElement selectCatagory;
 	@FindBy(xpath="//*[@id=\"frmJobRegistration:somType\"]/tbody/tr/td[3]/div/div[2]/span")
 	private WebElement radioButton;
@@ -126,10 +124,10 @@ public void enterJobTitle(String jobTitleText) {
 	}
 public void enterNoEmpNeeded(String NoEmpNeededeText) {
 	
-	 double parseDouble = Double.parseDouble(NoEmpNeededeText);
-	 DecimalFormat df = new DecimalFormat("0");
-        String formatNumber = df.format(parseDouble);
-        txtNoEmpNeeded.sendKeys(formatNumber);
+//	 double parseDouble = Double.parseDouble(NoEmpNeededeText);
+//	 DecimalFormat df = new DecimalFormat("0");
+//        String formatNumber = df.format(parseDouble);
+        txtNoEmpNeeded.sendKeys(NoEmpNeededeText);
 	
 	}
 	
@@ -140,17 +138,17 @@ public void enterJobDescription(String jobDiscriptionText) {
 	}
 public void enterRelevantExperience(String relevantExperincetext) {
 	
-	 double parseDouble = Double.parseDouble(relevantExperincetext);
-	 DecimalFormat df = new DecimalFormat("0");
-       String formatNumber = df.format(parseDouble);
-       txtRelevantExperience.sendKeys(formatNumber);
+//	 double parseDouble = Double.parseDouble(relevantExperincetext);
+//	 DecimalFormat df = new DecimalFormat("0");
+//       String formatNumber = df.format(parseDouble);
+       txtRelevantExperience.sendKeys(relevantExperincetext);
 	
 	}
 public void enterRemark(String remarkText) {
-	 double parseDouble = Double.parseDouble(remarkText);
-	 DecimalFormat df = new DecimalFormat("0");
-       String formatNumber = df.format(parseDouble);
-       txtRemark.sendKeys(formatNumber);
+//	 double parseDouble = Double.parseDouble(remarkText);
+//	 DecimalFormat df = new DecimalFormat("0");
+//       String formatNumber = df.format(parseDouble);
+       txtRemark.sendKeys(remarkText);
 	
 	}
 	
@@ -212,10 +210,10 @@ public void clickonEducationalLevelDropDown() {
 				
 			}
 		public void enterNoMinExp(String noMinExpext) {
-			 double parseDouble = Double.parseDouble(noMinExpext);
-			 DecimalFormat df = new DecimalFormat("0");
-		        String formatNumber = df.format(parseDouble);
-		        txtNoMinExp.sendKeys(formatNumber);
+//			 double parseDouble = Double.parseDouble(noMinExpext);
+//			 DecimalFormat df = new DecimalFormat("0");
+//		        String formatNumber = df.format(parseDouble);
+		        txtNoMinExp.sendKeys(noMinExpext);
 			
 		}
 	public void AddButton() {

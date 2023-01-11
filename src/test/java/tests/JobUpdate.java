@@ -38,7 +38,7 @@ public class JobUpdate extends Base {
 //	}
 //	
 	@Test(dataProvider="dataSupplier")
-	public void testRegister(HashMap<String,String> hMap) throws IOException {
+	public void testRegister(HashMap<String,String> hMap) throws IOException, InterruptedException {
 		
 		if(!DataUtil.isRunnable(excelReader, "JobUpdateTest", "Testcases") || hMap.get("Runmode").equals("N")) {
 			
@@ -59,16 +59,20 @@ public class JobUpdate extends Base {
 	    UpdateJobGrade payGradeUpdate=new  UpdateJobGrade(driver);
 
     	 payGradeUpdate.clickonGradeDropDownButton();
+ 	    Thread.sleep(2000);
     	 payGradeUpdate.SelectGrade();
+ 	    Thread.sleep(2000);
     	 payGradeUpdate.clickonEditAction();
+ 	    Thread.sleep(2000);
     	 payGradeUpdate.enterUpdateDiscription(hMap.get("UpdateDescription"));
-        	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+ 	    Thread.sleep(2000);
+        
          	payGradeUpdate.enterUpdateMaximumSalary(hMap.get("Update Maximum Salary"));
-        	driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS) ;
+    	    Thread.sleep(2000);
         	payGradeUpdate.enterUpdatedSalary(hMap.get("UpdateSalary"));
-        	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+    	    Thread.sleep(2000);
         	payGradeUpdate.clickonAddUpdate();
-        	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+    	    Thread.sleep(2000);
         	payGradeUpdate.clickonSave();
        
         	System.out.println("successfuly job Updated");

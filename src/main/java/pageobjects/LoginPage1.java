@@ -1,7 +1,5 @@
 package pageobjects;
-
 import java.text.DecimalFormat;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -42,7 +40,7 @@ public class LoginPage1 {
 		 double parseDouble = Double.parseDouble(passwordText);
 		 DecimalFormat df = new DecimalFormat("0");
 	        String formatNumber = df.format(parseDouble);
-		loginpassword.sendKeys(formatNumber);
+		loginpassword.sendKeys(passwordText);
 		
 	}
 	
